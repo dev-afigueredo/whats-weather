@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { BookmarksPage } from './pages/bookmarks/container/bookmarks.page';
-import { HomePage } from './pages/home/container/home/home.page';
+import { BookmarksPage } from './pages/bookmarks/containers/bookmarks.page';
+import { HomePage } from './pages/home/containers/home/home.page';
 
 const routes: Routes = [
   { path: '', component: HomePage },

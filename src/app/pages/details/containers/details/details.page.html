@@ -7,11 +7,13 @@
             <h1>{{ (details$ | async).city.name }}, {{ (details$ | async).city.country }}</h1>
 
             <div class="card current-card">
-                <whats-detailed-weather [weather]="(details$ | async).current"></whats-detailed-weather>
+                <whats-detailed-weather [weather]="(details$ | async).current"
+                                        [unit]="unit$ | async"></whats-detailed-weather>
             </div>
 
             <whats-daily-weather *ngFor="let daily of (details$ | async).daily" [dailyWeather]="daily"
-                [timeZone]="(details$ | async).city.timeZone"></whats-daily-weather>
+                [timeZone]="(details$ | async).city.timeZone" 
+                [unit]="unit$ | async"></whats-daily-weather>
         </ng-container>
 
         <div *ngIf="error$ | async">Erro</div>
